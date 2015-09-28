@@ -27,15 +27,15 @@
     </properties>
 
     <!-- 这个项目所依赖的library，可以有好几个dependency子节点，每个表示一个依赖到的library-->
-    <dependencies>
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>android</artifactId>
-            <version>4.1.1.4</version>
-            <!-- Scope表示这个library存在的时期，有compile，runtime，test和provided，provided表示在运行时这个app所在的device会给他提供 -->
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>com.google.android</groupId>-->
+            <!--<artifactId>android</artifactId>-->
+            <!--<version>4.1.1.4</version>-->
+            <!--&lt;!&ndash; Scope表示这个library存在的时期，有compile，runtime，test和provided，provided表示在运行时这个app所在的device会给他提供 &ndash;&gt;-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
 
 
     <!-- Build 节点配置的是项目编译的时候需要用到的一些东西,一个build节点下面有一个plugins子节点，在下面有多个plugin子节点，每个plugin子节点有groupId，artifactId，version等子节点，含义跟上面说到的基本一样。此外，plugin节点一般还有configuration节点，表示对这个plugin进一步的配置-->
@@ -55,14 +55,14 @@
                 <!--是否加载这个plugin的extensions，可以为true和false，也可以有一些列的extension子节点，在这里要设为true-->
                 <extensions>true</extensions>
             </plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                <!--<version>3.2</version>-->
+                <!--<configuration>-->
+                    <!--<source>1.6</source>-->
+                    <!--<target>1.6</target>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
    </project>
