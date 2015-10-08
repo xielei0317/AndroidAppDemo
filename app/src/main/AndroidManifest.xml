@@ -20,6 +20,6 @@
     </application>
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
-        android:label="Tests for My App"
+        android:label="TestsApp"
         android:targetPackage="com.example.gigold.gigoldandroidapp" />
 </manifest>
