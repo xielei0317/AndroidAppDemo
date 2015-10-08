@@ -18,7 +18,7 @@ public class TestMyApp extends InstrumentationTestCase {
     private TextView text = null;
 
     public void testSample() throws Throwable {
-        Assert.assertTrue(1 + 1 == 3); // 测试一个错误的结果
+        Assert.assertTrue(1 + 1 == 2); // 测试一个错误的结果
     }
 
     @Override
@@ -35,7 +35,7 @@ public class TestMyApp extends InstrumentationTestCase {
         super.setUp();
         Intent intent = new Intent();
 
-        intent.setClassName("cn.hpc.assistant", MainActivity.class.getName());
+        intent.setClassName("com.example.gigold.gigoldandroidapp", MainActivity.class.getName());
 
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
