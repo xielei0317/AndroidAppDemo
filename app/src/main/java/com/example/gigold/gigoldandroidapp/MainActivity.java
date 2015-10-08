@@ -4,13 +4,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    private TextView tv = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tv = (TextView) this.findViewById(R.id.text1);
+        this.findViewById(R.id.id_btn_fun).setOnClickListener(mOnClickListener);
     }
 
     @Override
@@ -33,5 +37,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    View.OnClickListener mOnClickListener = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.id_btn_fun:
+                    fun();
+                    break;
+                default:
+
+            }
+        }
+    };
+
+    private void fun(){
+        tv.setText(android.os.Build.MODEL + android.os.Build.getRadioVersion());
     }
 }
